@@ -7,7 +7,7 @@ CXXFLAGS = -fPIC -g -O2 -std=c++23
 # Never ask for an executable stack, whatever an object or the linker defaults to:
 # glibc 2.41+ refuses to load such a library.
 LDFLAGS = -shared -Wl,-z,noexecstack
-INCLUDES = $(shell pkg-config --cflags hyprland pixman-1 libdrm)
+INCLUDES = $(shell pkg-config --cflags hyprland pixman-1 libdrm lua-5.5)
 LIBS = $(shell pkg-config --libs hyprland) -ldl
 
 # Shown by `hyprctl plugin list`. Release builds pass HYPRGLASS_VERSION; other
